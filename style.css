@@ -1,0 +1,182 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  /* Imagen de fondo personalizada */
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 10px;
+}
+
+/* Contenedor principal de la portada */
+.portada {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Galería superior de 3 imágenes juntas */
+.galeria-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Separación mínima entre imágenes */
+  width: 100%;
+}
+
+.marco-foto {
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 3px solid #ffffff;
+  background-color: #fff;
+}
+
+/* Fotos laterales CUADRADAS */
+.foto-lateral {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.foto-lateral img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Foto central del corazón */
+.foto-corazon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.foto-corazon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Breve descripción */
+.descripcion-portada {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+  font-size: 1.05rem;
+}
+
+/* Enlaces con iconos */
+.seccion-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.boton-enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton-enlace:hover {
+  transform: translateY(-2px);
+  background-color: #ffffff;
+}
+
+.icono-enlace {
+  font-size: 1.1rem;
+  color: #e63946;
+}
+
+/* Hoja de papel para la carta */
+.contenedor-carta {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 40px;
+}
+
+.hoja-papel {
+  background-color: #fdfbf7;
+  background-image: repeating-linear-gradient(
+    #fdfbf7 0px,
+    #fdfbf7 29px,
+    #e2d9cc 30px
+  );
+  padding: 40px 50px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #e0c9a6;
+  min-height: 450px;
+  line-height: 30px;
+}
+
+.encabezado-carta {
+  text-align: right;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.contenido-carta {
+  outline: none;
+  font-size: 1.1rem;
+  color: #2c2c2c;
+  font-family: 'Times New Roman', serif;
+}
+
+.firma {
+  margin-top: 40px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  .foto-lateral {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .foto-corazon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .hoja-papel {
+    padding: 25px 20px;
+  }
+}
