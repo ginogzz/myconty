@@ -10,6 +10,21 @@
 </head>
 <body>
 
+  <!-- Validación de Contraseña -->
+  <script>
+    (function() {
+      var claveCorrecta = "constanzabonotto";
+      var intento = prompt("Ingresa el nombre completo de la persona que panconcin más ama con todo su corazón:");
+
+      // Si cancela o no coincide (ignorando mayúsculas/minúsculas y espacios extra)
+      if (!intento || intento.trim().toLowerCase() !== claveCorrecta.toLowerCase()) {
+        alert("Contraseña incorrecta.");
+        document.body.innerHTML = "<div style='display:flex; justify-content:center; align-items:center; height:100vh; color:white; font-family:sans-serif; text-align:center;'><h2>Acceso no autorizado.</h2></div>";
+        window.stop();
+      }
+    })();
+  </script>
+
   <header class="portada">
     <!-- Encabezado con tres imágenes agrupadas -->
     <div class="galeria-encabezado">
@@ -33,28 +48,28 @@
 
     <!-- Tres enlaces con iconos a la izquierda -->
     <nav class="seccion-enlaces">
-      <a href="https://open.spotify.com/track/6kp9czhrGZrP0hr9Y6opEr?si=d1f59762169e4b28 target="_blank" class="Cancioncita">
+      <a href="https://open.spotify.com/track/6kp9czhrGZrP0hr9Y6opEr?si=d1f59762169e4b28" target="_blank" class="boton-enlace">
         <i class="fa-solid fa-music icono-enlace"></i>
         <span>Cancioncita</span>
       </a>
 
-      <a href="https://drive.google.com/file/d/1IbqCmPGnMeiIWsuoPnyzMNVUWTSXKr-_/view?usp=sharing" target="_blank" class="(Nosotros prai)">
+      <a href="https://drive.google.com/file/d/1IbqCmPGnMeiIWsuoPnyzMNVUWTSXKr-_/view?usp=sharing" target="_blank" class="boton-enlace">
         <i class="fa-solid fa-star icono-enlace"></i>
         <span>(Nosotros prai)</span>
       </a>
 
-      <a href="https://drive.google.com/file/d/1gTkYidR_aYijriB8n0c2Ssm_ihvVUv0w/view?usp=sharing" target="_blank" class="Carta">
+      <a href="https://drive.google.com/file/d/1gTkYidR_aYijriB8n0c2Ssm_ihvVUv0w/view?usp=sharing" target="_blank" class="boton-enlace">
         <i class="fa-solid fa-heart icono-enlace"></i>
         <span>Carta</span>
       </a>
     </nav>
   </header>
 
-<!-- Hoja estilo papel para redactar la carta -->
+  <!-- Hoja estilo papel para redactar la carta -->
   <main class="contenedor-carta">
     <div class="hoja-papel">
       <div class="encabezado-carta">
-        <span class="fecha">28 de Octubre, 2026</span> <!-- Cambia la fecha si deseas -->
+        <span class="fecha">28 de Octubre, 2026</span>
       </div>
       
       <div class="contenido-carta" contenteditable="true">
@@ -72,10 +87,12 @@ Aunque hace ya más de un mes que estoy seguro que te quiero a mi lado por el re
         <p>Es muy bello esto que tenemos, siendo que yo mismo también sé lo feliz que te hago y que todo esto sea mutuo, reciproco, que no es unilateral (como has dicho) y que nos amemos y entendamos tanto el uno al otro.
 De nuevo siento que me quedo corto en esta carta escribiendo lo que provocas en mi, pero voy a seguir haciendolo y como vos dijiste: “capaz algun dia pueda medir al menos parcialmente todo lo que significas para mi.”.</p>
 
-        <p>Feliz primer mes! Te amo más que a nada en el mundo Cotita, por un jillion de meses, risas, besos, abrazos, siestas, peliculas, guisos y vidas más a tu lado. </p>
+        <p>Feliz primer mes! Te amo más que a nada en el mundo Cotita, por un jillion de meses, risas, besos, abrazos, siestas, peliculas, guisos y vidas más a tu lado.</p>
 
-        <p class="firma">Con todo mi amor, Gino.
+        <p class="firma">Con todo mi amor, Gino.</p>
       </div>
     </div>
-</main>
-    
+  </main>
+
+</body>
+</html>
